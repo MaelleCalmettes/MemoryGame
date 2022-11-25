@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**** Fonts ****/
+
+@font-face {
+    font-family: star;
+    src: url(./fonts/Starborn.ttf);
+}
+
+@font-face {
+    font-family: unicorn;
+    src: url(./fonts/ShinyUnicornDisplay.otf);
+}
+
+@font-face {
+    font-family: equestria;
+    src: url(./fonts/Equestria-yJY2.ttf);
+}
+
+
+/**** General ****/
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+/**** First Screen settings ****/
+
+/* text */
+
+.title {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: linear-gradient(#5c0474d2, #f5e8f9d5, #a454c4be);
+}
+
+
+.image {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./imgGoodSize/backgroundTitle.jpg);
+    background-size: cover;
+    z-index: -1000;
+    position: absolute;
+    opacity: 100%;
+
+}
+
+
+h1 {
+    width: 100vw;
+    padding: 30px;
+    font-family: equestria;
+    font-size: 50px;
+    text-align: center;
+    background-color: white;
+    overflow: hidden;
+    color: transparent;
+}
+
+.gradient {
+    background: linear-gradient(#fff06d, #da62ffd8, #ff8b55);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+/* My little pony */
+.pony {
+    font-family: star;
+    padding: 30px;
+    
+}
+
+/* button */
+
+button {
+    margin: 20px;
+    padding: 50px;
+    width: 40vw;
+    font-family: star;
+    font-size: 20px;
+    color: white;
+    border: 10px solid rgba(255, 255, 255, 0.849);
+    border-radius: 20px;
+    background: linear-gradient(#fff06dd2, #da62ffd5, #ff8b55be);
+    cursor: pointer;
+
+}
+
+button:hover {
+
+    background: white;
+    opacity: 80%;
+    color: #da62ffd5;
+    
+}
+
+/* animation */
+
+.animateSlideIN {
+    animation: slideIn 3s ease;
+    
+}
+
+@keyframes slideIn {
+    0%{top: 100%;}
+    100% {top:0%;}
+}
+
+.slideOut {
+    animation: slideOut 3s ease;
+}
+
+@keyframes slideOut {
+    0%{bottom:0%}
+    100% {bottom: 100%;};
+}
+
+.firstScreen, .endScreen {
+    position: absolute;
+}
+
+
+/**** Flip affect ****/
+
+.flipcard {
+    transform: rotateY(180deg);
+}
+
+
+.card {
+    transform-style: preserve-3d;
+    transition: all 0.8s ease-in-out;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.rightSens {
+    transform: rotateY(180deg);
+}
+
+/**** Game setting ****/
+
+.container {
+    position: absolute;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 10px solid white;
+    background: linear-gradient(#fff06d8a, #da62ff7a, #ff8b5563);
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 70px;
+}
+
+/***** score & back to menu *****/
+
+.theScore {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+p {
+    padding: 10px;
+    border-radius: 20px;
+    font-family: star;
+    font-size: 40px;
+    background-color: white;
+    overflow: hidden;
+    color: transparent;
+}
+
+p span {
+    background: linear-gradient(#fff06d, #da62ffd8, #ff8b55);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.backMenu {
+    padding: 20px;
+    width: fit-content;
+    font-size: 18px;
+}
+
+/****** custom cards  ******/
+
+.custom {
+    border: 5px solid #0f0474af;
+    border-radius: 10px;
+    background: linear-gradient(#5c0474d2, #f5e8f9d5, #a454c4be);
+}
+
+
+/**** all displays ****/
+
+
+/* hidden*/
+
+.hidden {
+    display: none;
+}
+
+
+/* blocks */
+
+.block {
+    display: block;
+}
+
